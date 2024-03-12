@@ -21,7 +21,9 @@ pip3 install -r requirements.txt     # install all our dependencies into the vir
 After the above steps, we should be able to launch our app using the following command.
 
 ```
-python3 src/app.py
+python3 src/app.py                   # for the patient finder app
+
+python3 src/condition-patient.py     # for the condition-patient app
 ```
 
 This will start the app on port 5000. You can open your preferred browser and see the app running on `http://localhost:5000`
