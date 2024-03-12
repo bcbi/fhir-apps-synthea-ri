@@ -34,7 +34,11 @@ def search_patients_by_condition(condition_id, credentials):
         conditions = req.json()['entry']
         patient_ids = [entry['resource']['subject']['reference'].split('/')[-1] for entry in conditions]
         patients = [request_patient(patient_id, credentials) for patient_id in patient_ids]
-        return patients
+         # Convert patient details into set of tuples to ensure uniqueness
+        unique_patients = set((patient['id'], patient['name'][0]['given'][0], patient['name'][0]['family'], patient['gender'], patient['birthDate']) for patient in patients)
+        
+        total_patients = len(unique_patients)
+        return {'unique_patients': unique_patients, 'total_patients': total_patients}
     else:
         return None
 
