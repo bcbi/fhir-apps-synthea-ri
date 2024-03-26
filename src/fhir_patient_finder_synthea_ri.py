@@ -39,7 +39,7 @@ def index_eu():
         except ValueError:
             result = 'Invalid input. Please enter a number.'
 
-    return render_template('index.html', result=result)
+    return render_template('patient_finder.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
