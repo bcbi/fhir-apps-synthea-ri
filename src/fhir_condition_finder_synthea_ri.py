@@ -58,7 +58,7 @@ def index_eu():
         except ValueError:
             result = 'Invalid input. Please enter a valid condition ID.'
 
-    return render_template('index2.html', result=result)
+    return render_template('condition_finder.html', result=result)
 
 
 if __name__ == '__main__':
