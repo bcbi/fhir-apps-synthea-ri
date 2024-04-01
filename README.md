@@ -21,6 +21,8 @@ pip3 install -r requirements.txt     # install all our dependencies into the vir
 After the above steps, we should be able to launch our app using the following command.
 
 ```
+export BCBI_MY_FHIR_PORT="5001"
+
 python3 src/fhir_patient_finder_synthea_ri.py    # for the patient finder app
 
 python3 src/fhir_condition_finder_synthea_ri.py  # for the condition-patient app
