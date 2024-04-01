@@ -1,1 +1,4 @@
 venv
+
+# macOS-specific:
+.DS_Store
