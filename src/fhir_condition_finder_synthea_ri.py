@@ -47,7 +47,7 @@ def search_patients_by_condition(condition_id, credentials):
 
 
 @app.route('/', methods=['GET', 'POST'])
-def index_eu():
+def index():
     result = None
     credentials = (username, password)
 
@@ -62,6 +62,6 @@ def index_eu():
 
 
 if __name__ == '__main__':
-    port_str = os.environ['BCBI_MY_FHIR_PORT']
+    port_str = os.environ['FHIR_PORT']
     port_int = int(port_str)
     app.run(debug=True, port=port_int)
